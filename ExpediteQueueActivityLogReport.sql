@@ -13,10 +13,10 @@ PARTITION BY PO.purchase_order_id,POLC.date
 				--PO.last_update_time 
 				order by PO.purchase_order_id, POLC.time desc) row_num
 
-from EDW_loebelectric_com_PROD.eclipse.purchase_order PO
-join EDW_loebelectric_com_PROD.eclipse.purchase_order_log_comment POLC on PO.purchase_order_id = POLC.purchase_order_id
+from EDW_loebe_PROD.clipse.purchase_order PO
+join EDW_loebe_PROD.clipse.purchase_order_log_comment POLC on PO.purchase_order_id = POLC.purchase_order_id
 
-where POLC.user_id like 'CWILLI' 
+where POLC.user_id like 'CWILLIS' 
 --order by purchase_order_id
 )
 select *
